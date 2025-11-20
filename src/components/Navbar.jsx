@@ -38,8 +38,10 @@ export default function Navbar() {
     <header className="fixed inset-x-0 top-0 z-50">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
         <div className="flex items-center gap-3">
-          <img src="/flame-icon.svg" className="h-8 w-8" alt="Učilnica AI" />
-          <span className="text-lg font-semibold text-white tracking-tight">Učilnica AI</span>
+          <a href="/" className="flex items-center gap-3">
+            <img src="/flame-icon.svg" className="h-8 w-8" alt="Učilnica AI" />
+            <span className="text-lg font-semibold text-white tracking-tight">Učilnica AI</span>
+          </a>
         </div>
 
         <div className="hidden items-center gap-6 md:flex">
@@ -47,7 +49,7 @@ export default function Navbar() {
           <a href="#varnost" className="text-sm text-white/80 hover:text-white transition">Zasebnost</a>
           <a href="#cena" className="text-sm text-white/80 hover:text-white transition">Cenik</a>
           <ThemeToggle />
-          <a href="#prijava" className="rounded-full bg-blue-500 px-4 py-2 text-sm font-medium text-white shadow-lg shadow-blue-500/30 hover:bg-blue-400 transition">Prijava</a>
+          <a href="/auth" className="rounded-full bg-blue-500 px-4 py-2 text-sm font-medium text-white shadow-lg shadow-blue-500/30 hover:bg-blue-400 transition">Prijava</a>
         </div>
 
         <button onClick={() => setOpen(!open)} className="md:hidden text-white/90">
@@ -61,7 +63,7 @@ export default function Navbar() {
             <a href="#features" className="text-white/90">Funkcionalnosti</a>
             <a href="#varnost" className="text-white/90">Zasebnost</a>
             <a href="#cena" className="text-white/90">Cenik</a>
-            <a href="#prijava" className="rounded-xl bg-blue-500 px-4 py-2 text-white text-center">Prijava</a>
+            <a href="/auth" className="rounded-xl bg-blue-500 px-4 py-2 text-white text-center">Prijava</a>
           </div>
         </div>
       )}

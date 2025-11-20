@@ -16,8 +16,8 @@ export default function CTA() {
             <p className="mt-3 text-white/75">Prijavi se, ustvari razred in začni sodelovati v nekaj sekundah. Varnost in zasebnost sta na prvem mestu.</p>
           </div>
           <div className="flex flex-col gap-3 md:flex-row md:justify-end">
-            <a href="#" className="rounded-xl bg-blue-500 px-5 py-3 text-center text-white shadow-lg shadow-blue-500/30 transition hover:bg-blue-400">Prijava</a>
-            <a href="#" className="rounded-xl border border-white/20 bg-white/5 px-5 py-3 text-center text-white backdrop-blur transition hover:bg-white/10">Ustvari račun</a>
+            <a href="/auth" className="rounded-xl bg-blue-500 px-5 py-3 text-center text-white shadow-lg shadow-blue-500/30 transition hover:bg-blue-400">Prijava</a>
+            <a href="/auth#signup" className="rounded-xl border border-white/20 bg-white/5 px-5 py-3 text-center text-white backdrop-blur transition hover:bg-white/10">Ustvari račun</a>
           </div>
         </div>
       </motion.div>
