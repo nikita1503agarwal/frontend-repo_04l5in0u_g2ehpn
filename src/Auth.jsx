@@ -2,7 +2,8 @@ import { useEffect, useMemo, useState } from 'react'
 import { motion } from 'framer-motion'
 import { useNavigate } from 'react-router-dom'
 
-const BASE_URL = import.meta.env.VITE_BACKEND_URL || 'http://localhost:8000'
+// Prefer environment variable, otherwise fall back to deployed backend URL
+const BASE_URL = import.meta.env.VITE_BACKEND_URL || 'https://ta-01kagyf0m6aw5jwpngrk4cjsc6-8000.wo-hzh1q9ep32ygi2lad7iuz8jpa.w.modal.host'
 
 export default function Auth() {
   const [mode, setMode] = useState('login') // 'login' | 'signup'
