@@ -25,9 +25,10 @@ export default function Auth() {
         const res = await fetch(`${BASE_URL}/schools`)
         if (!res.ok) throw new Error('Napaka pri pridobivanju šol')
         const data = await res.json()
-        setSchools(data.schools || [])
-        if (data.schools && data.schools.length > 0) {
-          setForm(prev => ({ ...prev, school_id: data.schools[0]._id }))
+        const items = data.items || []
+        setSchools(items)
+        if (items.length > 0) {
+          setForm(prev => ({ ...prev, school_id: items[0].id }))
         }
       } catch (e) {
         setError(e.message || 'Napaka omrežja')
@@ -189,7 +190,7 @@ export default function Auth() {
                     className="w-full appearance-none rounded-xl border border-white/10 bg-white/5 px-4 py-3 pr-10 text-white outline-none transition focus:border-blue-400/50 disabled:opacity-50"
                   >
                     {schools.map(s => (
-                      <option key={s._id} value={s._id} className="bg-slate-900">
+                      <option key={s.id} value={s.id} className="bg-slate-900">
                         {s.name}
                       </option>
                     ))}
